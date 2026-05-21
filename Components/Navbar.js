@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { BiTerminal } from "react-icons/bi";
-import { HiSun, HiMoon } from "react-icons/hi";
+import { HiSun, HiMoon, HiAcademicCap } from "react-icons/hi";
 import { CgUserlane } from "react-icons/cg";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { auth, provider } from "../Firebase/Firebase";
@@ -136,6 +136,17 @@ function Navbar({ topics }) {
                   )}
                 </span>
               </button>
+
+              <Link href="/school">
+                <a className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-indigo-600 dark:text-gray-50">
+                  <span className="mx-1 font-semibold text-base md:text-base hidden md:block">
+                    Məktəb Sistemi
+                  </span>
+                  <span className="text-xl">
+                    <HiAcademicCap className="text-xl" />
+                  </span>
+                </a>
+              </Link>
 
               <Link href="/about">
                 <a className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-indigo-600 dark:text-gray-50">
